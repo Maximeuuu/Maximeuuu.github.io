@@ -65,8 +65,7 @@ Propriétés images
 div.projet>img {
 	margin:auto;
 	padding-bottom:10px;
-	width: 25%;
-	height: auto;
+	height: 15vh;
 	text-align: center;
 	float: right;
 }
