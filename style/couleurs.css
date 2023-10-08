@@ -1,0 +1,34 @@
+/*    VARIABLES    */
+* {
+	--rouge: rgb(192,0,0);
+	--orange: rgb(247,145,82);
+	--jaune: rgb(255,192,0);
+	--vert: rgb(146,208,80);
+	--bleu: rgb(7,52,143);
+	--violet: rgb(124,1,190);
+}
+
+.bgcolor-rouge
+{
+	background-color: var(--rouge) !important;
+}
+.bgcolor-orange
+{
+	background-color: var(--orange) !important;
+}
+.bgcolor-jaune
+{
+	background-color: var(--jaune) !important;
+}
+.bgcolor-vert
+{
+	background-color: var(--vert) !important;
+}
+.bgcolor-bleu
+{
+	background-color: var(--bleu) !important;
+}
+.bgcolor-violet
+{
+	background-color: var(--violet) !important;
+}

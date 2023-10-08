@@ -1,0 +1,470 @@
+/*============================== INFORMATIONS ==============================
+Dégradé de couleur : #452E3A, #896F63, #A3906E, #D3BD81, #DEBC67
+
+bleu : #525DC6, rouge : #F24626, gris :#B1C0BF, gris foncé : #1e2933
+
+https://believemy.com/r/faire-de-la-coloration-syntaxique-avec-html-et-css
+============================== ----------- ==============================*/
+
+/*    VARIABLES    */
+* {
+	--couleur-h1: #DEBC67;
+	--couleur-h2: #D3BD81;
+	--couleur-h3: #A3906E;
+	--couleur-h4: #896F63;
+
+	--couleur-bg-p: #DDC282; /*#DEBC67*/
+
+	--couleur-bg-code: #282c34;
+	--couleur-bordure: #896F63;
+
+	--couleur-bg: #f2f2f2;
+	--couleur-texte: #000000; /*452E3A*/
+
+	--couleur-bg-article: #fafafa;
+
+	--couleur-a: #452EEF;
+
+	--couleur-header: #452E3A;/*#333;*/
+	--couleur-texte-header: #fff;
+}
+
+
+/*
+1.Propriétés globales
+2.Propriétés titres
+3.Propriétés balises générales
+4.Propriétés liens
+5.Propriétés header
+6.Propriétés nav
+7.Propriétés summary
+8.Couleurs section
+9.Styles paragraphes
+10.Propriétés section et article
+11.Propriétés iframe
+12.Propriétés pour les zones de code
+13.Propriétés table
+14.Propriétés footer
+*/
+
+/*-------------------
+Propriétés globales
+-------------------*/
+#lien-portfolio {
+	border-radius: 10px;
+	border: 2px solid var(--couleur-h4);
+	background-color: var(--couleur-bg-p);
+	width: 15em;
+	text-align: center;
+	font-size: 3em;
+	box-shadow: 1px 1px black;
+	margin: 2em;
+}
+#lien-portfolio:hover {
+	opacity: 0.90;
+	box-shadow: none;
+}
+
+body {
+	padding-left: 2%;
+    padding-right: 2%;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--couleur-texte);
+	background-color: var(--couleur-bg);
+}
+
+/*-------------------
+Propriétés titres
+-------------------*/
+h1  {
+    font-size: 2.2em;
+    color: var(--couleur-h1);
+    font-family: verdana;
+    text-align: center;
+    text-decoration: underline overline;
+    text-shadow: 1px 1px 2px #452E3A;
+    margin-top: 1em;
+}
+h2  {
+    font-size: 1.6em;
+    color: var(--couleur-h2);
+    font-family: verdana;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px #452E3A;
+    margin-top: 2em;
+}
+h3  {
+    font-size: 1.4em;
+    color: var(--couleur-h3);
+    font-family: verdana;
+    margin-top: 2em;
+    text-indent: 1em;
+    text-decoration: underline;
+}
+h4  {
+    font-size: 1em;
+    color: var(--couleur-h4);
+    font-family: verdana;
+}
+
+/*-------------------
+Propriétés balises générales
+-------------------*/
+img {
+	height: 10em;
+    float:right;
+	margin-right: 65%;
+}
+b {
+	font-weight: bold;
+}
+i {
+	font-style: italic;
+}
+s {
+	text-decoration: line-through;
+}
+u {
+	text-decoration: underline;
+}
+mark {
+	background-color: grey;
+}
+.spoiler{
+	background-color: #25262b;
+	color:#25262b;
+}
+.spoiler:hover{
+	background-color:#4a4d53;
+	color:white;
+}
+a {
+	color: var(--couleur-a);
+}
+hr{
+	width:70%;
+	border:3px solid var(--couleur-header);
+	text-align: center;
+	margin-bottom: 50px;
+	border-radius: 15px;
+}
+section>hr {
+	width:95%;
+	margin-top: 50px;
+}
+section>hr:after {
+	content: "\273D \273D \273D";
+	height: 0;
+	letter-spacing: 1.5em;
+	color: var(--couleur-header);
+}
+
+/*-------------------
+Propriétés liens
+-------------------*/
+a:link { /* unvisited link */
+	color: var(--couleur-a);
+}
+a:visited { /* visited link */
+	color: var(--couleur-a);
+}
+a:hover { /* mouse over link */
+	color: blue;
+	text-decoration: none;
+}
+a:active { /* selected link */
+	color: var(--couleur-a);
+}
+
+/*-------------------
+Propriétés header et footer
+-------------------*/
+header, footer {
+	margin-top: 1em;
+	background-color: var(--couleur-header);/*#DEBC67*/
+	color: var(--couleur-texte-header);
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px #333; /*#DEBC67*/
+}
+
+header {
+	padding: 10px;
+	padding-right: 5%;
+	padding-left: 5%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header h1 {
+	margin: 0;
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+}
+
+
+/*-------------------
+Propriétés nav
+-------------------*/
+nav {
+    opacity: 0.6;
+    position:fixed;
+    right:0;
+    top:0;
+    z-index: 1;
+}
+nav ul {
+    list-style-type: none;
+    opacity: 0.9;
+}
+nav li {
+    display: inline-block;
+}
+nav a {
+	text-align: center;
+	text-decoration: none;
+}
+nav img {
+    margin: 8px;
+    height: 50px;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+}
+nav img:hover {
+	background-color: #dde; /*#555*/
+	color : white;
+}
+
+/*-------------------
+Propriétés summary
+-------------------*/
+summary ul {
+  list-style-type: kannada;
+  padding-left: 40px;
+}
+summary ol {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-top: -10px;
+}
+summary li {
+  margin-bottom: 0px;
+}
+summary a {
+  text-decoration: none;
+  font-size: 1em;
+}
+summary a:hover {
+  color: #008080;
+}
+
+/*-------------------
+Couleurs section et article
+-------------------*/
+article{
+	padding: 1em;
+	background-color: var(--couleur-bg-article);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.color-section-red ul, .color-section-red ol
+{
+	background-color: #F24626;
+}
+.color-section-skyblue1 ul, .color-section-skyblue1 ol
+{
+	background-color: #525DC6;
+}
+.color-section-skyblue2 ul, .color-section-skyblue2 ol
+{
+	background-color: #4752c4;
+}
+.color-section-darkgrey ul, .color-section-darkgrey ol
+{
+	background-color: #283036;
+}
+.color-section-green ul, .color-section-green ol
+{
+	background-color: #137748;
+}
+.color-section-pink ul, .color-section-pink ol
+{
+	background-color: #A438D6;
+}
+.color-section-darkblue ul, .color-section-darkblue ol
+{
+	background-color: #1323A0;
+	/*list-style-color: white;*/
+}
+.color-section-purple ul, .color-section-purple ol
+{
+	background-color: #654195;
+}
+.color-section-bado ul, .color-section-bado ol
+{
+	background-color: #266c32;
+}
+.color-section-systeme ul, .color-section-systeme ol
+{
+	background-color: #ffc000;
+}
+.color-section-java ul, .color-section-java ol
+{
+	background-color: #bc144b;
+}
+.color-section-systeme ul, .color-section-systeme ol
+{
+	background-color: #ffc000;
+}
+.color-section-algo ul, .color-section-algo ol
+{
+	background-color: #186fb2;
+}
+.color-section-html ul, .color-section-html ol
+{
+	background-color: #f24626;
+}
+.color-section-css ul, .color-section-css ol
+{
+	background-color: #525dc6;
+}
+
+
+/*-------------------
+Syles paragraphes
+-------------------*/
+p, p.p-body
+{
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	clear: both;
+}
+p.p-head
+{
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+p.p-foot
+{
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+p.p-comment
+{
+	background-color: #75b99e;
+}
+p.p-caution
+{
+	background-color: #c97d7d;
+}
+p.p-grey, li.p-grey
+{
+	color: #6f6f6f; /*#888888*/
+}
+p.p-centre
+{
+	text-align: center;
+}
+p.p-justifie
+{
+	text-align: justify;
+}
+
+/*-------------------
+Propriétés section
+-------------------*/
+section {
+	clear: both;
+}
+section ul, section ol {
+	/*font-family: monospace;
+    font-size: 1.1em;*/
+    padding-right: 5px;
+    padding-bottom: 5px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+section p {
+	background-color: var(--couleur-bg-p);
+	font-size: 1em;
+	padding: 15px;
+	padding-bottom: 5px;
+}
+section li {
+	padding: 0.2em;
+	font-family: sans-serif;
+	font-size: 1.1em;
+	background-color: var(--couleur-bg-p);
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+
+/*-------------------
+Propriétés iframe
+-------------------*/
+iframe  {
+    position: relative;
+
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 0;
+    width: 90vw;
+    height: 50vw;
+
+    border-style: inset;
+    border-color: var(--couleur-bordure);
+    border-width: 5px;
+}
+
+/*-------------------
+Propriétés pour les zones de code
+-------------------*/
+pre {
+    border-radius: 10px;
+    background-color: var(--couleur-bg-code);
+    border-color: var(--couleur-bordure);
+    border-width: 5px;
+    border-style: inset;
+    color: white;
+    font-size: 1.2em;
+    font-family: monospace;
+    margin-right: 10%;
+}
+pre:hover   {
+    border-color: #ff4754;
+    border-style: outset;
+}
+.hljs   { /*fonctionne avec le java et css ajouté*/
+}
+.hljs:hover {
+}
+
+/*-------------------
+Propriétés table
+-------------------*/
+table   {
+    border-width: 2px;
+    border-color: #000080;
+    border-style: solid;
+    width: 50%;
+}
+tbody   {
+    background-color: #C0C0FF;
+}
+th  {
+    background-color: #C0C0C0;
+}
+/*td  {
+    width: 25%
+}*/
+caption {
+    font-size: 1.2em;
+    caption-side: bottom;
+}
